@@ -1,0 +1,26 @@
+.display-flex{
+	display:flex;
+ flex-wrap: wrap;
+}
+.display-block{
+	display:block;
+}
+.display-none{
+	display:none;
+}
+.display-around{
+	display:flex;
+	justify-content: space-around;
+}
+.display-center{
+	display:flex;
+	justify-content: center;
+}
+.display-between{
+	display:flex;
+	justify-content: space-between;
+}
+.display-evenly{
+	display:flex;
+	justify-content: space-evenly;
+}

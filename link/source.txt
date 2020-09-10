@@ -1,0 +1,7 @@
+<!-- Fin de la Partie vue Js -->
+<!-- https://fontawesome.com/ -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!--
+ https://fontawesome.com/icons 
+ https://www.dafont.com/fr/
+-->

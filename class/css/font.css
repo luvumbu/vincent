@@ -1,0 +1,10 @@
+  /* https://fontawesome.com/ */
+  /* Roboto TTF */
+  @font-face {
+    font-family: "Roboto-Black";
+    src: url("../../src/font/Roboto/Roboto-Black.ttf");
+  }
+  @font-face {
+    font-family: "Roboto-Regular";
+    src: url("../../src/font/aAlloyInk/Roboto-Regular.ttf");
+  }
