@@ -4,7 +4,7 @@ header("Access-Control-Allow-Origin: *");
 
  
 $REMOTE_ADDR= $_SERVER['REMOTE_ADDR'];
-
+$fino = "1";
 if($REMOTE_ADDR!="::1" || $REMOTE_ADDR!="127.0.0.1" ){
 	$servername = "localhost";
 	$username = "u481158665_vincent";
@@ -22,7 +22,7 @@ else {
 }
 
 
-$fino = "1";
+
  
 
 if(isset($_POST["prix3"])){
