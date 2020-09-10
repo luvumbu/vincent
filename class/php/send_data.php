@@ -72,7 +72,7 @@ $conn->close();
 	}
 	
 	$sql = "INSERT INTO datas (id_union_datas ,nom_datas,reference_datas, prix_datas)
-	VALUES ('$fab1', '$ref1 ', '$prix1','$fino')";
+	VALUES ('$fab1', '$ref1 ', '$fino','$prix1')";
 	
 	if ($conn->query($sql) === TRUE) {
 		echo "New record created successfully";
@@ -84,7 +84,7 @@ $conn->close();
 
 
 	$sql = "INSERT INTO datas (id_union_datas ,nom_datas,reference_datas, prix_datas)
-	VALUES ('$fab2', '$ref2 ', '$prix2','$fino')";
+	VALUES ('$fab2', '$ref2 ', '$fino','$prix2')";
 	
 	if ($conn->query($sql) === TRUE) {
 		echo "New record created successfully";
@@ -95,7 +95,7 @@ $conn->close();
 
 
 	$sql = "INSERT INTO datas (id_union_datas ,nom_datas,reference_datas, prix_datas)
-	VALUES ('$fab3', '$ref3 ', '$prix3','$fino')";
+	VALUES ('$fab3', '$ref3 ', '$fino','$prix3')";
 	
 	if ($conn->query($sql) === TRUE) {
 		echo "New record created successfully";
