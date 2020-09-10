@@ -95,7 +95,7 @@ $conn->close();
 
 
 	$sql = "INSERT INTO datas (id_union_datas ,nom_datas,reference_datas, prix_datas)
-	VALUES ('$fab3', '$ref3 ', '$fino','$prix3')";
+	VALUES ('$fab3', '$ref3 ', '$prix3','$fino')";
 	
 	if ($conn->query($sql) === TRUE) {
 		echo "New record created successfully";
