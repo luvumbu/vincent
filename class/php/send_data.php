@@ -22,7 +22,7 @@ else {
 }
 
 
-$fino = "";
+$fino = "1";
  
 
 if(isset($_POST["prix3"])){
