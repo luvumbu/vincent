@@ -73,8 +73,11 @@ var section = new Vue({
 		produit_nom_s: function(moi) {
 
 	
-		
-			console.log(moi.target.id);
+		  
+	id_bis= "display_none "+moi.target.id;
+
+document.getElementsByClassName(moi.target.id)[0].className=""; 
+	
 		},
 
 		valider: function () {
@@ -124,6 +127,10 @@ var section = new Vue({
 
 					//	console.log(ok.info()); // demande l'information dans le tableau
 					ok.push(); // envoie l'information au code pkp 
+					setTimeout(function(){ 
+						document.location.reload(true);
+					
+					}, 400);
 				}
 			}
 			if (verif == true) {
@@ -153,6 +160,12 @@ var section = new Vue({
 						ok.add("prix2", prix_2.value); // ajout de l'information pour lenvoi 
 						//	console.log(ok.info()); // demande l'information dans le tableau
 						ok.push(); // envoie l'information au code pkp 
+
+
+						setTimeout(function(){ 
+							document.location.reload(true);
+						
+						}, 400);
 					}
 
 				} else {

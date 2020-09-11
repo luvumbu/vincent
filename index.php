@@ -124,29 +124,13 @@ session_start();
 			cursor: pointer;
 		}
 
-		.liste_produit_nom {
-			font-size: 2em;
-			max-height: 600px;
-			overflow-y: scroll;
-			width: 70%;
-			margin: auto;
-		}
-
-		.liste_produit_nom div {
-			border: 2px solid  var(--bodycolor);
-			width: 60%;
-			margin: auto;
-			transition:all 1s;
-		
-		}
-
-		.liste_produit_nom div:hover {
-		
-			background-color: var(--bodycolor);
-			color: white;
-			transition:all 1s;
-		}
-
+ 
+ .nom_datas{
+	 cursor: pointer;
+	 text-align: center;
+	 margin-top: 50px;
+	 
+ }
 		body,
 		input,
 		::placeholder {
@@ -174,8 +158,9 @@ session_start();
 
 			.liste_produit_nom div {
 				border: 2px solid  var(--bodycolor);
-				width: 90%;
+				width: 70%;
 				margin: auto;
+				margin-top:50px;
 			}
 
 			.liste_produit_nom {

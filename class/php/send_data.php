@@ -49,14 +49,13 @@ if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
 	  
-	 $fino=$row["MAX(id_datas)"];
-	 if($fino==""){
-		$fino=1;
-	}
 	 
+	 if($row["MAX(id_datas)"]==""){
+		$fino=1;
+	}	 
   }
 } else {
-  echo "0 results";
+ 
 }
 $conn->close();
 
