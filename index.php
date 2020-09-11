@@ -1,6 +1,5 @@
 <?php
 session_start();
-echo $_SERVER['REMOTE_ADDR'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -36,12 +35,23 @@ echo $_SERVER['REMOTE_ADDR'];
 	?>
 
 	<style>
-		.options {
+		.options,
+		.options2 {
 			display: flex;
 			width: 80%;
 			margin: auto;
 			justify-content: space-around;
 			border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+		}
+
+		.options2 {
+			border-bottom: 1px solid rgba(0, 0, 0, 0);
+			margin-top: 100px;
+			text-align: center;
+		}
+		.options2 input {
+			text-align: center;
+			padding: 10px;
 		}
 
 		.fa-folder-plus,
@@ -63,35 +73,43 @@ echo $_SERVER['REMOTE_ADDR'];
 			text-align: center;
 			margin-top: 50px;
 		}
-		.inputs input {
-				width:90%;
-			}
-			.valider {
-				background-color: #4ab995;
-				text-align: center;
-				width: 30%;
-				transition: 1s all;
-				margin-top: 15px;
-				padding: 10px;
-				color: white;
-				border:1px solid #499c81;
-				margin-left:2.5%;
-			}
-			.valider:hover{
-				cursor: pointer;
-				background-color:#499c81 ;
-				border:1px solid #4ab995;
-				transition: 1s all;
 
-			}
-		@media screen and (max-width: 1280px) {
-			.options {
- 
-			width: 100%;
- 
+		.inputs input {
+			width: 90%;
 		}
+
+		.valider {
+			background-color: #4ab995;
+			text-align: center;
+			width: 30%;
+			transition: 1s all;
+			margin-top: 15px;
+			padding: 10px;
+			color: white;
+			border: 1px solid #499c81;
+			margin-left: 2.5%;
+		}
+
+		.valider:hover {
+			cursor: pointer;
+			background-color: #499c81;
+			border: 1px solid #4ab995;
+			transition: 1s all;
+		}
+
+		#recherche {
+			border: 1px solid rgba(0, 0, 0, 0.2);
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			.options,
+			.options2 {
+				width: 100%;
+			}
+
 			.inputs input {
-				width:90%;
+				width: 90%;
 			}
 		}
 	</style>
