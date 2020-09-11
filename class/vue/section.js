@@ -70,15 +70,24 @@ var section = new Vue({
 			this.liste_produit="select2 options2";		 
 			this.search="";			 
 		},
-		produit_nom_s: function(moi) {
+		produit_nom_s: function(moi) {		  
 
-	
-		  
-	id_bis= "display_none "+moi.target.id;
+	try {
+		id_bis= "display_none "+moi.target.id;
+		document.getElementsByClassName(moi.target.id)[0].className=""; 	
+	} catch (error) {
+	//	console.error(error);
+ console.log("une error")
+ 
+	}
 
-document.getElementsByClassName(moi.target.id)[0].className=""; 
+
 	
 		},
+		produit_nom_s2: function(moi) {		  
+			id_bis= "display_none "+moi.target.id+"2";
+		document.getElementsByClassName(moi.target.id)[0].className=""; 	
+				},
 
 		valider: function () {
 			
