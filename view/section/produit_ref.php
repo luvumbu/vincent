@@ -19,7 +19,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) { 
-		echo "<div v-on:click='click_folder'>".$row["reference_datas"]."</div>";
+ 
 		echo "<br/>";
   }
 } else {

@@ -84,9 +84,9 @@ var section = new Vue({
 			var ref_2 = document.getElementById("ref2");
 			var ref_3 = document.getElementById("ref3");
 
-			var fab_1 = document.getElementById("fab1");
-			var fab_2 = document.getElementById("fab2");
-			var fab_3 = document.getElementById("fab3");
+			var nom_1 = document.getElementById("nom1");
+			var nom_2 = document.getElementById("nom2");
+			var nom_3 = document.getElementById("nom3");
 
 			var prix_1 = document.getElementById("prix1");
 			var prix_2 = document.getElementById("prix2");
@@ -97,10 +97,10 @@ var section = new Vue({
 			var verif3 = false;
 			if (ref_1.value != "" && ref_2.value != "" && ref_3.value != "") {
 				verif = true;
-				if (fab_1.value != "" && fab_2.value != "" && fab_3.value != "") {
+				if (nom_1.value != "" && nom_2.value != "" && nom_3.value != "") {
 					verif2 = true;
 				} else {
-					alert("comleter le nom du fabricant");
+					alert("comleter le nom du nomricant");
 				}
 				if (prix_1.value != "" && prix_2.value != "" && prix_3.value != "") {
 					verif3 = true;
@@ -110,15 +110,15 @@ var section = new Vue({
 				if (verif2 == true && verif3 == true) {
 					/* Lors que toutes les valeurs sont ok */
 
-					ok.add("fab1", fab_1.value); // ajout de l'information pour lenvoi 
+					ok.add("nom1", nom_1.value); // ajout de l'information pour lenvoi 
 					ok.add("ref1", ref_1.value); // ajout de l'information pour lenvoi 
 					ok.add("prix1", prix_1.value); // ajout de l'information pour lenvoi 
 
-					ok.add("fab2", fab_2.value); // ajout de l'information pour lenvoi 
+					ok.add("nom2", nom_2.value); // ajout de l'information pour lenvoi 
 					ok.add("ref2", ref_2.value); // ajout de l'information pour lenvoi 
 					ok.add("prix2", prix_2.value); // ajout de l'information pour lenvoi 
 
-					ok.add("fab3", fab_3.value); // ajout de l'information pour lenvoi 
+					ok.add("nom3", nom_3.value); // ajout de l'information pour lenvoi 
 					ok.add("ref3", ref_3.value); // ajout de l'information pour lenvoi 
 					ok.add("prix3", prix_3.value); // ajout de l'information pour lenvoi 
 
@@ -130,10 +130,10 @@ var section = new Vue({
 
 			} else {
 				if (ref_1.value != "" && ref_2.value != "") {
-					if (fab_1.value != "" && fab_2.value != "") {
+					if (nom_1.value != "" && nom_2.value != "") {
 						verif2 = true;
 					} else {
-						alert("Completer nom du fabricant");
+						alert("Completer nom du nomricant");
 						verif2 = false;
 					}
 					if (prix_1.value != "" && prix_2.value != "") {
@@ -144,11 +144,11 @@ var section = new Vue({
 					}
 					if (verif2 == true && verif3 == true) {
 
-						ok.add("fab1", fab_1.value); // ajout de l'information pour lenvoi 
+						ok.add("nom1", nom_1.value); // ajout de l'information pour lenvoi 
 						ok.add("ref1", ref_1.value); // ajout de l'information pour lenvoi 
 						ok.add("prix1", prix_1.value); // ajout de l'information pour lenvoi 
 
-						ok.add("fab2", fab_2.value); // ajout de l'information pour lenvoi 
+						ok.add("nom2", nom_2.value); // ajout de l'information pour lenvoi 
 						ok.add("ref2", ref_2.value); // ajout de l'information pour lenvoi 
 						ok.add("prix2", prix_2.value); // ajout de l'information pour lenvoi 
 						//	console.log(ok.info()); // demande l'information dans le tableau

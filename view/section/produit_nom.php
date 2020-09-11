@@ -20,12 +20,9 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
- ?>
-<div> 
-  <?php echo $row["nom_datas"] ?> 
-</div>
-<i  id="<?php echo "ids_".$row['id_datas']?>" class="fa fa-plus-circle" v-on:click='produit_nom_s'  style="margin-bottom: 45px;"></i>
-<br/>
+
+echo $row["nom_datas"]; 
+?>
 
  <?php 
 

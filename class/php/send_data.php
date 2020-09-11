@@ -22,15 +22,15 @@ echo 	$dbname.'-';
 if(isset($_POST["prix3"])){
  
 
-$fab1 = $_POST["fab1"];
+$nom1 = $_POST["nom1"];
 $ref1 = $_POST["ref1"];
 $prix1 = $_POST["prix1"];
 
-$fab2 = $_POST["fab2"];
+$nom2 = $_POST["nom2"];
 $ref2 = $_POST["ref2"];
 $prix2 = $_POST["prix2"];
 
-$fab3 = $_POST["fab3"];
+$nom3 = $_POST["nom3"];
 $ref3 = $_POST["ref3"];
 $prix3 = $_POST["prix3"];
 
@@ -50,6 +50,9 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 	  
 	 $fino=$row["MAX(id_datas)"];
+	 if($fino==""){
+		$fino=1;
+	}
 	 
   }
 } else {
@@ -64,12 +67,13 @@ $conn->close();
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	}
+
 	
 	$sql = "INSERT INTO datas (id_union_datas ,nom_datas,reference_datas, prix_datas)
-	VALUES ('$fab1', '$ref1 ', '$fino','$prix1')";
+	VALUES ('$fino','$nom1', '$ref1 ', '$prix1')";
 	
 	if ($conn->query($sql) === TRUE) {
-		echo "New record created successfully";
+	//	echo "New record created successfully";
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}
@@ -78,10 +82,10 @@ $conn->close();
 
 
 	$sql = "INSERT INTO datas (id_union_datas ,nom_datas,reference_datas, prix_datas)
-	VALUES ('$fab2', '$ref2 ', '$fino','$prix2')";
+	VALUES ('$fino','$nom2', '$ref2 ', '$prix2')";
 	
 	if ($conn->query($sql) === TRUE) {
-		echo "New record created successfully";
+		//echo "New record created successfully";
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}
@@ -89,10 +93,10 @@ $conn->close();
 
 
 	$sql = "INSERT INTO datas (id_union_datas ,nom_datas,reference_datas, prix_datas)
-	VALUES ('$fab3', '$ref3 ', '$fino','$prix3')";
+	VALUES ('$fino','$nom3', '$ref3 ', '$prix3')";
 	
 	if ($conn->query($sql) === TRUE) {
-		echo "New record created successfully";
+	//	echo "New record created successfully";
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}
@@ -103,11 +107,11 @@ $conn->close();
 
 }
 else {
-	$fab1 = $_POST["fab1"];
+	$nom1 = $_POST["nom1"];
 	$ref1 = $_POST["ref1"];
 	$prix1 = $_POST["prix1"];
 	
-	$fab2 = $_POST["fab2"];
+	$nom2 = $_POST["nom2"];
 	$ref2 = $_POST["ref2"];
 	$prix2 = $_POST["prix2"];
 	
@@ -133,8 +137,13 @@ else {
 		}
 	} else {
 		echo "0 results";
+		$fino="1";
 	}
 	$conn->close();
+
+
+
+ 
 	
 		
 		// Create connection
@@ -145,19 +154,19 @@ else {
 		}
 		
 		$sql = "INSERT INTO datas (id_union_datas ,nom_datas,reference_datas, prix_datas)
-		VALUES ('$fab1', '$ref1 ', '$fino','$prix1')";
+		VALUES ('$fino','$nom1', '$ref1 ', '$prix1')";
 		
 		if ($conn->query($sql) === TRUE) {
-			echo "New record created successfully";
+		//	echo "New record created successfully";
 		} else {
 			echo "Error: " . $sql . "<br>" . $conn->error;
 		}
 			
 		$sql = "INSERT INTO datas (id_union_datas ,nom_datas,reference_datas, prix_datas)
-		VALUES ('$fab2', '$ref2 ', '$fino','$prix2')";
+		VALUES ('$fino','$nom2', '$ref2 ', '$prix2')";
 		
 		if ($conn->query($sql) === TRUE) {
-			echo "New record created successfully";
+		//	echo "New record created successfully";
 		} else {
 			echo "Error: " . $sql . "<br>" . $conn->error;
 		}
