@@ -24,6 +24,7 @@ if ($result->num_rows > 0) {
 <div v-on:click='produit_nom_s' id="<?php echo "ids_".$row['id_datas']?>"> 
   <?php echo $row["nom_datas"] ?> 
 </div>
+<i class="fa fa-plus-circle" style="margin-bottom: 45px;"></i>
 <br/>
 
  <?php 

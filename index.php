@@ -140,7 +140,7 @@ session_start();
 		}
 
 		.liste_produit_nom div:hover {
-			cursor: pointer;
+		
 			background-color: var(--bodycolor);
 			color: white;
 			transition:all 1s;
@@ -161,7 +161,9 @@ session_start();
 		#recherche {
 			border: 1px solid rgba(0, 0, 0, 0.2);
 		}
-
+.fa-plus-circle:hover{
+	cursor: pointer;
+}
 		@media screen and (max-width: 1280px) {
 
 			.options,
