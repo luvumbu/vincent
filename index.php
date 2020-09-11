@@ -69,7 +69,8 @@ session_start();
 
 		.fa-folder-plus:hover,
 		.fa-folder:hover,
-		.fa-search:hover {
+		.fa-search:hover ,
+		.fa-plus-circle:hover{
 			cursor: pointer;
 		}
 
