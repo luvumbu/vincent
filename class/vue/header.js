@@ -11,6 +11,7 @@ var header = new Vue({
 		connexion_button: function () {
 			console.log("Connexion button");
 		},
+
 		mail_key: function () {
 			var mmon_mail = document.getElementById(this.mail);
 			var mmon_password = document.getElementById(this.password);
@@ -47,3 +48,5 @@ var header = new Vue({
 		
 	}
 })
+
+

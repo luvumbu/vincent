@@ -48,7 +48,9 @@ session_start();
 			justify-content: space-around;
 			border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 		}
-
+.display_none{
+	display: none;
+}
 		.options2 {
 			border-bottom: 1px solid rgba(0, 0, 0, 0);
 			margin-top: 100px;
@@ -148,6 +150,40 @@ session_start();
 		}
 .fa-plus-circle:hover{
 	cursor: pointer;
+}
+
+
+
+
+.select_list{
+
+	border: 1px solid var(--bodycolor);
+	width: 50%;
+	margin: auto;
+	margin-top:20px; 
+	text-align: center;
+	transition: 1.5s all;
+}
+.select_list:hover{
+	background-color: var(--bodycolor);
+	transition: 0.5s all;
+	color: white;
+	cursor: pointer;
+}
+.pages {
+	display: flex;
+width: 50%;
+margin: auto;
+}
+.pages div {
+ 
+	border: 2px solid var(--bodycolor);  ; 
+	margin-right: 2px;
+	padding: 2px;
+}
+.pages div {
+ 
+cursor:pointer; 
 }
 		@media screen and (max-width: 1280px) {
 

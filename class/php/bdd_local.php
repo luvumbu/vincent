@@ -6,5 +6,6 @@ $dbname = "vincent";
 $_SESSION["servername"] = $servername ; 
 $_SESSION["username"] = $username ; 
 $_SESSION["password"] = $password ; 
-$_SESSION["dbname"] = $dbname  ; 
+$_SESSION["dbname"] = $dbname  ;
+
 ?>
