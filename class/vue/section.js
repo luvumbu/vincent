@@ -6,25 +6,77 @@ var section = new Vue({
 		search: "",
 		addproduit: "display_none",
 		search:"display_none",
-		folder:"display_none"
+		folder:"display_none",
+		produit_nom:"display_none",
+		produit_ref:"display_none",
+		liste_produit_nom:"display_none",
+		liste_produit_ref:"display_none"
 	},
 	methods: {
-
+	
+		ajax: function(id,link){
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById(id).innerHTML =
+					this.responseText;
+				}
+			};
+			xhttp.open("GET", link, true);
+			xhttp.send();
+		},
+		alldisplay: function() {
+			this.folder="display_none";
+			this.search="display_none";
+			this.addproduit = "display_none";
+			this.produit_ref="display_none";
+			this.folder="display_none";
+			this.liste_produit="display_none";
+			this.produit_nom="display_none";	
+			this.liste_produit_nom="display_none";	
+			this.liste_produit_ref="display_none";	
+		},
 		click_plus: function () {
+			this.alldisplay();
 			this.addproduit = "";
-			this.folder="display_none";
-			this.search="display_none";
+
 		},
+		click_produit_nom:function() {
+			this.alldisplay();
+			this.folder="options2 select2";			
+			this.produit_nom="options2";
+		//	this.ajax("produit_nom","view/section/produit_nom.php");
+		this.liste_produit_nom="liste_produit_nom";
+					
+		},
+		click_produit_ref:function() {
+			this.alldisplay();
+			this.folder="options2 select2";		
+			this.	produit_ref	="options2";	
+			//this.ajax("produit_ref","view/section/produit_ref.php");	
+			this.liste_produit_ref="liste_produit_nom";		
+			
+		},
+
 		click_folder: function () {
-			this.addproduit = "display_none";
-			this.search="display_none";
-			this.folder="";
+			this.alldisplay();
+			this.liste_produit="select2 options2";		 
+      this.folder="options2 select2";
+		
 		},
+
 		click_search: function () {
-			this.addproduit = "display_none";
-			this.folder="display_none";
-			this.search="";
+			this.alldisplay();
+			this.liste_produit="select2 options2";		 
+			this.search="";			 
 		},
+		produit_nom_s: function(moi) {
+
+	
+		
+			console.log(moi.target.id);
+		},
+
 		valider: function () {
 			
 			var ok = new Information("class/php/send_data.php"); // création de la classe 

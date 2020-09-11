@@ -1,9 +1,15 @@
 <?php
-$servername = "localhost";
-$username = "u481158665_bokonzi_cops";
+$servername = "localhost"; 
+$username = "u481158665_vincent"; 
+$dbname = "u481158665_vincent";  
 $password = "v3p9r3e@59A";
 $dbname = $username;
 $REMOTE_ADDR =   $_SERVER['REMOTE_ADDR'];
+
+$_SESSION["servername"] = $servername ; 
+$_SESSION["username"] = $username ; 
+$_SESSION["password"] = $password ; 
+$_SESSION["dbname"] = $dbname  ; 
 $localisation = "internet"; // atribution delement variable 
 // $_SESSION["country"] = $query['country'];
 // $_SESSION["city"] = $query['city'];
@@ -20,12 +26,5 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO cookie_all_connexion (cookie_all_connexion_ip,cookie_all_connexion_ville,cookie_all_connexion_pays)
-VALUES ('$REMOTE_ADDR','$city','$country')";
 
-if ($conn->query($sql) === TRUE) {
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
-$conn->close();
 ?>

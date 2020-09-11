@@ -1,30 +1,24 @@
 <?php 
-
+session_start(); 
 header("Access-Control-Allow-Origin: *");
 
+
+
  
-$REMOTE_ADDR= $_SERVER['REMOTE_ADDR'];
 $fino = "1";
-if($REMOTE_ADDR!="::1" || $REMOTE_ADDR!="127.0.0.1" ){
-	$servername = "localhost";
-	$username = "u481158665_vincent";
-	$password = "v3p9r3e@59A";
-	$dbname = "u481158665_vincent"; 
-}
-else {
-	$servername = "localhost";
-	$username = "root";
-	$password = "root";
-	$dbname = "vincent"; 
-
-
  
-}
+	$servername = $_SESSION["servername"];
+	$username =	$_SESSION["username"];
+	$password = $_SESSION["password"];
+	$dbname = $_SESSION["dbname"]; 
 
 
+	
+echo 	$servername.'-'  ;  
+echo 	$username.'-';
 
- 
-
+echo 	$password.'-'; 
+echo 	$dbname.'-';
 if(isset($_POST["prix3"])){
  
 
@@ -151,7 +145,7 @@ else {
 		}
 		
 		$sql = "INSERT INTO datas (id_union_datas ,nom_datas,reference_datas, prix_datas)
-		VALUES ('$fab1', '$ref1 ', '$prix1','$fino')";
+		VALUES ('$fab1', '$ref1 ', '$fino','$prix1')";
 		
 		if ($conn->query($sql) === TRUE) {
 			echo "New record created successfully";
@@ -160,7 +154,7 @@ else {
 		}
 			
 		$sql = "INSERT INTO datas (id_union_datas ,nom_datas,reference_datas, prix_datas)
-		VALUES ('$fab2', '$ref2 ', '$prix2','$fino')";
+		VALUES ('$fab2', '$ref2 ', '$fino','$prix2')";
 		
 		if ($conn->query($sql) === TRUE) {
 			echo "New record created successfully";

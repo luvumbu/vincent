@@ -1,5 +1,7 @@
 <?php
 session_start();
+ 
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -35,6 +37,9 @@ session_start();
 	?>
 
 	<style>
+		:root {
+  --bodycolor: #332e71;
+}
 		.options,
 		.options2 {
 			display: flex;
@@ -49,6 +54,7 @@ session_start();
 			margin-top: 100px;
 			text-align: center;
 		}
+
 		.options2 input {
 			text-align: center;
 			padding: 10px;
@@ -79,7 +85,7 @@ session_start();
 		}
 
 		.valider {
-			background-color: #4ab995;
+			background-color:  var(--bodycolor);;
 			text-align: center;
 			width: 30%;
 			transition: 1s all;
@@ -93,8 +99,63 @@ session_start();
 		.valider:hover {
 			cursor: pointer;
 			background-color: #499c81;
-			border: 1px solid #4ab995;
+			border: 1px solid  var(--bodycolor);;
 			transition: 1s all;
+		}
+
+		.select2 div {
+
+			padding: 15px;
+			color: white;
+			border: 2px solid  var(--bodycolor);
+			color:  var(--bodycolor);
+			transition: 2s all;
+		}
+
+		.select2 div:hover {
+
+			padding: 15px;
+			color: white;
+			background-color:  var(--bodycolor);
+			color:  var(--bodycolor);
+			transition: 0.5s all;
+			color: white;
+			cursor: pointer;
+		}
+
+		.liste_produit_nom {
+			font-size: 2em;
+			max-height: 600px;
+			overflow-y: scroll;
+			width: 70%;
+			margin: auto;
+		}
+
+		.liste_produit_nom div {
+			border: 2px solid  var(--bodycolor);
+			width: 60%;
+			margin: auto;
+			transition:all 1s;
+		
+		}
+
+		.liste_produit_nom div:hover {
+			cursor: pointer;
+			background-color: var(--bodycolor);
+			color: white;
+			transition:all 1s;
+		}
+
+		body,
+		input,
+		::placeholder {
+			color: #332e71;
+		}
+
+		input {
+			border: 1px solid #332e71;
+			padding: 15px;
+			margin: 4px;
 		}
 
 		#recherche {
@@ -108,8 +169,24 @@ session_start();
 				width: 100%;
 			}
 
+			.liste_produit_nom div {
+				border: 2px solid  var(--bodycolor);
+				width: 90%;
+				margin: auto;
+			}
+
+			.liste_produit_nom {
+				font-size: 1.2em;
+			}
+
 			.inputs input {
 				width: 90%;
+			}
+
+			.options2 {
+
+				margin-top: 50px;
+
 			}
 		}
 	</style>

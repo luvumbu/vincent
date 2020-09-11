@@ -42,13 +42,32 @@
 			</div>
 		</div>
 	</div>
+	<div class="valider" v-on:click="valider">
+		Valider
+	</div>
 </div>
+
 <div class="options2">
 	<div v-bind:class="folder">
-		v-bind:class="folder"
+		<div v-on:click="click_produit_nom">
+			Liste des produit par nom
+		</div>
+		<div v-on:click="click_produit_ref">
+			Liste des produit par réference
+		</div>
 	</div>
 	<div v-bind:class="search">
 		<label for="recherche">Recherche</label> <input type="text" id="recherche" placeholder="recherche réference">
 	</div>
 </div>
+<div v-bind:class="produit_nom" v-on:click="click_produit_nom" id="produit_nom">
+	<h1>
+		Liste produit nom
+	</h1>
+</div>
+<div v-bind:class="produit_ref" v-on:click="click_produit_ref" id="produit_ref">
+	<h1>
+		Liste produit Réf
+
+	</h1>
 </div>
